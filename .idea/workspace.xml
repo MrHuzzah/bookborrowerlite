@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="daca1997-1584-4ce0-810e-2a9d0ae6285b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Backend/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend" beforeDir="false" afterPath="$PROJECT_DIR$/Backend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.gitattributes" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
       <workItem from="1769734588338" duration="57000" />
       <workItem from="1769734685815" duration="75000" />
       <workItem from="1769735047443" duration="15000" />
-      <workItem from="1769737306767" duration="546000" />
+      <workItem from="1769737306767" duration="683000" />
     </task>
     <servers />
   </component>
