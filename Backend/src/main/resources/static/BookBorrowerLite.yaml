@@ -1,0 +1,137 @@
+openapi: 3.0.0
+info:
+  title: BookBorrower Lite API
+  version: 1.1.0
+  description: API for BookLibrary, BookAdd, and BookRate components.
+
+paths:
+  /books:
+    get:
+      summary: Load Library Dashboard
+      parameters:
+        - name: title
+          in: query
+          schema:
+            type: string
+        - name: sortBy
+          in: query
+          schema:
+            type: string
+            enum: [title, borrowDate, rating]
+      responses:
+        '200':
+          description: Dashboard data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  summary:
+                    $ref: '#/components/schemas/Summary'
+                  books:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Book'
+    post:
+      summary: Add a new book
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewBook'
+      responses:
+        '201':
+          description: Created
+        '400':
+          description: Validation error
+
+  /books/{id}:
+    get:
+      summary: Get one book
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Book details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+    patch:
+      summary: Update rating
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [rating]
+              properties:
+                rating:
+                  type: integer
+                  minimum: 1
+                  maximum: 5
+      responses:
+        '200':
+          description: Updated
+
+components:
+  schemas:
+    Genre:
+      type: string
+      enum: [Fiction, History, Fantasy, Sci-Fi]
+
+    Summary:
+      type: object
+      properties:
+        totalBooks:
+          type: integer
+        totalOverdue:
+          type: integer
+
+    Book:
+      type: object
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        author:
+          type: string
+        genre:
+          $ref: '#/components/schemas/Genre'
+        borrowDate:
+          type: string
+          format: date
+        rating:
+          type: integer
+          nullable: true
+
+    NewBook:
+      type: object
+      required: [title, author, genre, borrowDate]
+      properties:
+        title:
+          type: string
+          minLength: 3
+          maxLength: 30
+        author:
+          type: string
+          minLength: 3
+          maxLength: 30
+        genre:
+          $ref: '#/components/schemas/Genre'
+        borrowDate:
+          type: string
+          format: date
