@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.book-add {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.book-add header {
+  margin-bottom: 2rem;
+}
+
+.book-add form {
+  max-width: 520px;
+}
+
+.book-add input,
+.book-add select {
+  width: 100%;
+  background-color: #09090b;
+  border: 1px solid #27272a;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.book-add input:focus,
+.book-add select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+
+.book-add label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #d6d6dd;
+  margin-left: 0.25rem;
+}
+
+.book-add-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.book-add-actions button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.book-add-actions button[type="submit"]:hover {
+  background-color: #3b82f6;
+}
+
+.book-add-actions button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+.book-add-actions button[type="button"] {
+  background-color: #27272a;
+  border: 1px solid #3f3f46;
+  color: #d4d4d8;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.book-add-actions button[type="button"]:hover {
+  background-color: #3f3f46;
+}
+
+.book-add form {
+  max-width: 520px;
+  border: 1px solid #374151;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  background-color: #111827;
+  margin-top: 1rem;
+}
+
+.book-add input,
+.book-add select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.book-add-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.book-add button {
+background-color: #2563eb;
+cursor: pointer;
+}
+
+.book-add button:hover {
+background-color: #3b82f6;
+}
+
+.book-add button {
+background-color: #09090b;
+border: 1px solid #27272a;
+color: #ffffff;
+padding: 0.75rem 1rem;
+border-radius: 0.75rem;
+font-weight: 600;
+outline: none;
+transition: all 0.2s ease;
+}
+
+.input-error {
+border-color: #ef4444 !important; /* red-500 */
+box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25);
+}

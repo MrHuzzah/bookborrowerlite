@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #424242;
+  color: #e5e7eb;
+  margin: 0;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+input[type="date"] {
+  color-scheme: dark;
+}
+
+.summary-info {
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  color: #ffffff;
+}
+.summary-info strong { color: #9ca3af; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #374151;
+  text-align: left;
+  color: #e5e7eb;
+}
+
+th {
+  background-color: #1f2937;
+  color: #f9fafb;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+button {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #3b82f6;
+}
+button:active {
+  transform: scale(0.98);
+}
+
+.buttoncancel {
+  background-color: #27272a;
+  border: 1px solid #3f3f46;
+  color: #d4d4d8;
+}
+.buttoncancel:hover {
+  background-color: #3f3f46;
+}
+
+.mono {
+filter: grayscale(100%) contrast(1.2);
+}
